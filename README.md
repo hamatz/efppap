@@ -37,6 +37,8 @@ Protocol
 
 # 利用手順
 
+※ exeファイルは distフォルダ配下にあります。
+
 ### Tested System:
 * windows10が動くそこらへんのPC
 
