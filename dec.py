@@ -1,13 +1,12 @@
 import sys
-from utils.aes_util import AESUtil
-from utils.rsa_util import RSAUtil
-
-from Crypto.PublicKey import RSA
-
-import sys
 import binascii
 import json
 import base64
+
+from Crypto.PublicKey import RSA
+
+from utils.aes_util import AESUtil
+from utils.rsa_util import RSAUtil
 
 def main(target, prv_key, pass_phrase):
     aes_util = AESUtil()

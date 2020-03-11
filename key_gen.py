@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     else:
         print('Param Error')
-        print('$ enc.py <my_pass>')
+        print('$ key_gen.py <my_pass>')
         quit()
 
     main(my_pass)

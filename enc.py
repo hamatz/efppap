@@ -1,22 +1,21 @@
-from utils.aes_util import AESUtil
-from utils.rsa_util import RSAUtil
-
 import sys
 import binascii
 import json
 import base64
 
+from utils.aes_util import AESUtil
+from utils.rsa_util import RSAUtil
+
 def main(target_file_name, path_to_rsa_pub_key, result_file_name):
     aes_util = AESUtil()
-    target_data = open(target_file_name, "rb")
-    target = target_data.read()
-    enc_content = aes_util.encrypt(target)
-    target_data.close()
+    with open(target_file_name, 'rb') as f:
+        target = f.read()
+        enc_content = aes_util.encrypt(target)
     
     content_key = aes_util.get_aes_key()
     
-    p_file = open(path_to_rsa_pub_key, "r")
-    pkey_data = p_file.read()
+    with open(path_to_rsa_pub_key, 'r') as f2:
+        pkey_data = f2.read()
 
     rsa_util = RSAUtil()
     enc_key = rsa_util.encrypt_with_pubkey(content_key, pkey_data)
