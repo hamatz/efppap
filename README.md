@@ -37,11 +37,8 @@ Protocol
 
 # 利用手順
 
-## Python
 ### Tested System:
-* OSX 10.12.6
-* python 3.6.2
-
+* windows10が動くそこらへんのPC
 
 ### 通常の利用方法
 1. 公開鍵と秘密鍵の生成
