@@ -39,7 +39,7 @@ if __name__ == '__main__':
         pass_phrase = args[3]
     else:
         print('Param Error')
-        print('$ enc.py <path_to_target_data> <path_to_rsa_private_key> <pass_phrase>')
+        print('$ dec.py <path_to_target_data> <path_to_rsa_private_key> <pass_phrase>')
         quit()
 
     main(target, prv_key, pass_phrase)
