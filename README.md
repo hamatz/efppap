@@ -27,6 +27,8 @@ Protocol
 ・指定された公開鍵を用いたデータの暗号化  
 ・指定された秘密鍵を用いたデータの復号  
 
+・自身の秘密鍵で署名を付けた暗号化ファイルの生成
+・署名つき暗号化ファイルの署名検証＆復号（署名検証成功の場合のみ復号されたファイルを出力）
 
 ## 依存関係:
 
@@ -62,6 +64,18 @@ enc <target_file_name> <path_to_rsa_pub_key> <result_file_name>
 dec <path_to_target_data> <path_to_rsa_private_key> <password_for_your_keys>
 ```
 
+4. 自身の秘密鍵で署名を付けた暗号化ファイルの生成
+
+```bash:
+enc_and_sign.py <target_file_name> <path_to_rsa_pub_key> <result_file_name> <path_to_rsa_prv_key> <pass_phrase>
+```
+
+5. 署名つき暗号化ファイルの署名検証＆復号
+
+```bash:
+verify_and_dec.py <path_to_target_data> <path_to_rsa_private_key> <pass_phrase>
+```
+
 
 ## 実行ファイルの作成方法
 
@@ -77,6 +91,13 @@ pyinstaller enc.py --onefile
 pyinstaller dec.py --onefile
 ```
 
+```bash:
+pyinstaller enc_and_sign.py --onefile
+```
+
+```bash:
+pyinstaller verify_and_dec.py --onefile
+```
 
 ## 参考文献
 
