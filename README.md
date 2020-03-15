@@ -67,13 +67,13 @@ dec <path_to_target_data> <path_to_rsa_private_key> <password_for_your_keys>
 4. 自身の秘密鍵で署名を付けた暗号化ファイルの生成
 
 ```bash:
-enc_and_sign.py <target_file_name> <path_to_rsa_pub_key> <result_file_name> <path_to_rsa_prv_key> <pass_phrase>
+enc_and_sign <target_file_name> <path_to_rsa_pub_key> <result_file_name> <path_to_rsa_prv_key> <pass_phrase>
 ```
 
 5. 署名つき暗号化ファイルの署名検証＆復号
 
 ```bash:
-verify_and_dec.py <path_to_target_data> <path_to_rsa_private_key> <pass_phrase>
+verify_and_dec <path_to_target_data> <path_to_rsa_private_key> <pass_phrase>
 ```
 
 
