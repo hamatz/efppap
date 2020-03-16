@@ -1,8 +1,8 @@
 
-Passwordつきｚｉｐ暗号化ファイルを送ります
-Passwordを送ります
-Aん号化（暗号化）
-Protocol
+Passwordつきｚｉｐ暗号化ファイルを送ります  
+Passwordを送ります  
+Aん号化（暗号化）  
+Protocol  
 
 2020年3月現在、世間にはPPAPなどと呼ばれる作法があるようです。
 ついカッとなってPythonで本ツールを作りました。
